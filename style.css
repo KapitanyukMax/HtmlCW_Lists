@@ -1,0 +1,78 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* pseudo elements ::before, ::after - adding objects before and after an element */
+h2::before, h2::after {
+    content: "*";
+    color: red;
+}
+
+ul.custom-style {
+    list-style-type: square;
+    list-style-position: inside;
+}
+
+/* pseudo element ::marker - styling li marker */
+ul li.important::marker {
+    color: red;
+}
+
+ul.reset-style {
+    list-style-type: none;
+}
+
+ul.image-marker-style {
+    list-style-image: url(Images/Ukraine.png);
+}
+
+ol.custom-style {
+    list-style-type: upper-roman;
+}
+
+ol.custom-marker-style {
+    list-style-type: none;
+    counter-reset: count;
+}
+
+ol.custom-marker-style li::before {
+    color: darkblue;
+    content: "[" counter(count) "] ";
+    counter-increment: count;
+}
+
+dt {
+    padding: 10px;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+    background-color: darkblue;
+    color: white;
+    text-align: center;
+}
+
+dd {
+    margin-left: 0;
+    margin-bottom: 4px;
+    border-bottom-left-radius: 6px;
+    border-bottom-right-radius: 6px;
+    padding: 10px;
+    background-color: rgb(19, 19, 172);
+    color: white;
+}
+
+ol.multilevel-list {
+    color: lightgray;
+}
+
+ol.multilevel-list ol {
+    list-style-type: georgian;
+    color: darkblue;
+}
+
+ol.multilevel-list ul {
+    color: darkgreen;
+}
+
+ol.multilevel-list ul ul {
+    color: brown;
+}
